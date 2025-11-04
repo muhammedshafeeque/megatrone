@@ -3,6 +3,7 @@ import ora from 'ora';
 import chalk from 'chalk';
 import { identifyAndValidatingInput } from '../Helper/inputHelper.js';
 import { whatWeb } from '../service/UrlAnalysis/getUrldata.js';
+import { analysisTestRsultAndRetuningInterestedValuesAsJson } from '../service/Ai/main.js';
 export const getTarget = async () => {
     
     const target = await inquirer.prompt({
