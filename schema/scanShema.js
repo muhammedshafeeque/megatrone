@@ -1,6 +1,6 @@
 import { Schema } from 'arango-typed';
 import { collections } from '../constants/Constants.js';
-export const scanSchema = new Schema(collections.SCANS, {
+export const scanSchema = new Schema({
     target: { type: String, required: true },
     ports: { type: Array, required: true },
     services: { type: Array, required: true },

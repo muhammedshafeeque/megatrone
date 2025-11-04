@@ -1,6 +1,6 @@
 import { Schema } from 'arango-typed';
 import { collections } from '../constants/Constants.js';
-export const toolsSchema = new Schema(collections.TOOLS, {
+export const toolsSchema = new Schema({
     tool: { type: String, required: true },
     description: { type: String, required: true },
     commandsExample: { type: Array, required: true },
