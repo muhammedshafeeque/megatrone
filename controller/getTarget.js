@@ -17,7 +17,10 @@ export const getTarget = async () => {
         return null;
     }else if (validatedTarget.type === 'url') {
         const whatWebResult = await whatWeb(validatedTarget.value);
+         const spinner = ora('Analyzing whatweb result...').start();
         const interestingValues = await analysisTestRsultAndRetuningInterestedValuesAsJson({ testResult: whatWebResult });
+        spinner.succeed(chalk.green('Analysis completed'));
+        console.log(chalk.green(interestingValues));
         return interestingValues;
     }else if (validatedTarget.type === 'ip') {
         console.log(chalk.green('Validating IP...'));
