@@ -1,3 +1,4 @@
+import chalk from 'chalk';
 import { terminal } from '../../terminal.js';
 import ora from 'ora';
 export const whatWeb = async (url) => {
